@@ -1,50 +1,31 @@
-# React + TypeScript + Vite
+# vite setting
+- (1) npm 초기화  
+` npm init -y `
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- (2) typescript 설치  
+` npm install -D typescript `
 
-Currently, two official plugins are available:
+- (3) typescript 초기화  
+` node ./node_modules/typescript/bin/tsc --init `
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- (4) ts-node 초기화  
+` npm install -D ts-node `
 
-## Expanding the ESLint configuration
+- (5) vite 최신버전으로 설치  
+` npm create vite@latest . `
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- (6) node_moudules 설치  
+` npm install `
+<br><br><br>
 
-- Configure the top-level `parserOptions` property like this:
+# git commit
+- (1) 대상 선택 (.은 모든 변경사항 선택)  
+` git add [파일명]  `
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- (2) local 커밋  
+` git commit -m "[커밋메세지]" `
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- (3) remote 커밋  
+` git push [원격저장소명] [브랜치명] `
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+» 원격저장소를 모르는경우 `git remote` 로 확인 !
